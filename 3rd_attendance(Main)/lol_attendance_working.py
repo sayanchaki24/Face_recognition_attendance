@@ -19,7 +19,7 @@ def load_training_data(path):
   """
   images = []
   classNames = []
-  for filename in os.listdir("C:\\GCU\\Pyhton programs\\Project\\random_attendance\\known_faces"):
+  for filename in os.listdir("C:\\GCU\\Pyhton programs\\Project\\random_attendance\\known_faces"): #"""path of the folder which contain training image"""
     img = cv2.imread(os.path.join(path, filename))
     if img is not None:
       classNames.append(os.path.splitext(filename)[0])
