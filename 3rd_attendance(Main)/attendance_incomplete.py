@@ -69,7 +69,7 @@ attendance_list = []  # Stores names of attendees for current session
 cap = cv2.VideoCapture(0)  # Use 0 for default webcam
 
 # Path to the folder containing known face images
-known_faces_dir = "C:\\GCU\\Pyhton programs\\Project\\random_attendance\\known_faces"
+known_faces_dir = "C:\\GCU\\Pyhton programs\\Project\\Face_recognition_attendance\\3rd_attendance(Main)\\known_faces"
 
 # Loop through all the images in the known faces folder
 for filename in os.listdir(known_faces_dir):
