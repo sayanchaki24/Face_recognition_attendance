@@ -19,7 +19,7 @@ def load_training_data(path):
   """
   images = []
   classNames = []
-  for filename in os.listdir("C:\\GCU\\Pyhton programs\\Project\\random_attendance\\known_faces"): #"""path of the folder which contain training image"""
+  for filename in os.listdir("C:\\GCU\\Pyhton programs\\Project\\Face_recognition_attendance\\3rd_attendance(Main)\\known_faces"): #"""path of the folder which contain training image"""
     img = cv2.imread(os.path.join(path, filename))
     if img is not None:
       classNames.append(os.path.splitext(filename)[0])
@@ -53,7 +53,7 @@ def mark_attendance(roll_no, date):
   """
   try:
     # Open the Excel workbook
-    wb = load_workbook("C:\\GCU\\Pyhton programs\\Project\\random_attendance\\lolattendance_list.xlsx")
+    wb = load_workbook("C:\\GCU\\Pyhton programs\\Project\\Face_recognition_attendance\\3rd_attendance(Main)\\lolattendance_list.xlsx")
     sheet = wb.active
 
     # Find or create the date column
@@ -90,7 +90,7 @@ def mark_attendance(roll_no, date):
       print(f'Attendance already marked for {roll_no} on {date}')
 
     # Save changes to the spreadsheet
-    wb.save("C:\\GCU\\Pyhton programs\\Project\\random_attendance\\lolattendance_list.xlsx")
+    wb.save("C:\\GCU\\Pyhton programs\\Project\\Face_recognition_attendance\\3rd_attendance(Main)\\lolattendance_list.xlsx")
 
   except Exception as e:
     print(f'Error occurred while marking attendance: {e}')
@@ -99,7 +99,7 @@ def main():
   """Main function that loads training data, performs face recognition, and marks attendance."""
 
   # Path to the training images directory
-  path = "C:\\GCU\\Pyhton programs\\Project\\PY\\Training_images"
+  path = "C:\\GCU\\Pyhton programs\\Project\\Face_recognition_attendance\\3rd_attendance(Main)\\known_faces"
 
   # Load training images and names
   images, classNames = load_training_data(path)
